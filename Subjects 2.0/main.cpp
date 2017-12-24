@@ -197,8 +197,9 @@ int main(void)
 //	printStudentReg();
 /************************************/
 	obtainConflict();
+	
 	for(int i=0; i<NUM_SUBJECTS; i++)
-		for(int j = i; i<NUM_SUBJECTS; j++)
+		for(int j = i; j<NUM_SUBJECTS; j++)
 			if(conflictMatrix[i][j] != 0)
 				g1.addEdge(i, j);
 	
