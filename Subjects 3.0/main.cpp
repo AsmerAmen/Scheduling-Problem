@@ -1,28 +1,34 @@
+/*	School exams scheduler problem
+ *	Solved using Graph coloring algorithm 
+ *	
+ *	@author: Ahmed "Asmer" Amen
+ *	24/8/2017
+ */
 #include <iostream>
 #include <stdio.h>
 #include <ctime> 
 #include <cstdlib> 
 #include <list>
-#include "schedular.h"
+#include "scheduler.h"
 
 using namespace std;
 
 int main(void)
 {
-	Schedular s1(NUM_SUBJECTS);
+	Scheduler s1(NUM_SUBJECTS);
 	
 	s1.generateRegister();
-//	printStudentReg();
+//	s1.printStudentReg();
 /************************************/
 	s1.obtainConflict();
 /************************************/
 	s1.makeGraph();
 	
     s1.greedyColoring();
-//	printConflictMatrix();
+//	s.1printConflictMatrix();
 /************************************/
 	s1.findNonConflictMatrix();
-//	printNonConflictMatrix();
+//	s1.printNonConflictMatrix();
 	
 	system("PAUSE");
 	return 0;
