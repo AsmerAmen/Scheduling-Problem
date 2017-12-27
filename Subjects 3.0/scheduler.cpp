@@ -86,31 +86,41 @@ void Scheduler::findNonConflictMatrix(void){
 
 //	prints out the Student registry matrix
 void Scheduler::printStudentReg(void){
+	cout<<"Student Registry:\n"
+		<<"-----------------\n";
+	cout<<">> Subjects, vv Students"<<endl;
+	
 	for(int i=0; i<NUM_STUDENTS; i++){
+		cout<<"Std["<<i<<"]: ";
 		for(int j=0; j<NUM_SUBJECTS; j++)
-			cout<<stdReg[i][j];
+			cout<<stdReg[i][j]<<" ";
 		cout<<endl<<endl;
-	}	
+	} 	
 }
 //	prints out the subjects conflict matrix
-void Scheduler::printConflictMatrix(void){		
+void Scheduler::printConflictMatrix(void){	
+	cout<<"Conflict Matrix:\n"
+		<<"----------------\n";
 	for(int sub=0; sub<NUM_SUBJECTS; sub++){
+		cout<<"Sub["<<sub<<"]: ";
 		for(int subj=0; subj<NUM_SUBJECTS; subj++)
-			cout<<conflictMatrix[sub][subj]<<"\t";
+			cout<<conflictMatrix[sub][subj]<<" ";
 		cout<<endl<<endl;
 	}
 }
 
 //	prints out the subjects non-conflict matrix
 void Scheduler::printNonConflictMatrix(void){
+	cout<<"Non-conflict Matrix:\n"
+		<<"----------------\n";
 	for(int i=0; i<NUM_SUBJECTS; i++){
 		cout<<"Sub["<<i<<"]: ";
 		for(int j=0; j<NUM_SUBJECTS; j++){
 			if(nonConflictMatrix[i][j]==1)
 				cout<<j<<"\t";
-		}
+		} // end for 
 		cout<<endl<<endl;
-	}
+	} // end for 
 }
  
 /* Puts the conflict matrix in the graph form

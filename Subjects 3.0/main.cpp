@@ -19,16 +19,15 @@ int main(void)
 	
 	s1.generateRegister();
 //	s1.printStudentReg();
-/************************************/
+/*******************************************/
 	s1.obtainConflict();
-/************************************/
-	s1.makeGraph();
-	
-    s1.greedyColoring();
-//	s.1printConflictMatrix();
-/************************************/
+//	s1.printConflictMatrix();
+/*******************************************/
 	s1.findNonConflictMatrix();
 //	s1.printNonConflictMatrix();
+/*******************************************/
+	s1.makeGraph();	
+    s1.greedyColoring();
 	
 	system("PAUSE");
 	return 0;

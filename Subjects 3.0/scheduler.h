@@ -17,10 +17,10 @@ class Scheduler
 {
     int V;    // No. of vertices
     list<int> *adj;    // A dynamic array of adjacency lists
-	int stdReg[NUM_STUDENTS][NUM_SUBJECTS];			//	Student/subjects matrix
-	int conflictMatrix[NUM_SUBJECTS][NUM_SUBJECTS];	//	subject/subject matrix
-	int nonConflictMatrix[NUM_SUBJECTS][NUM_SUBJECTS];
-	int check[NUM_SUBJECTS];
+	int stdReg[NUM_STUDENTS][NUM_SUBJECTS] = {0};			//	Student/subjects matrix
+	int conflictMatrix[NUM_SUBJECTS][NUM_SUBJECTS] = {0};	//	subject/subject matrix
+	int nonConflictMatrix[NUM_SUBJECTS][NUM_SUBJECTS] = {0};
+	int check[NUM_SUBJECTS] = {0};
 	// function to add an edge to graph
 	void addEdge(int v, int w);
 	
